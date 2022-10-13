@@ -22,6 +22,7 @@
 <body>
 
   <div class="contenitore-tutto">
+
     <!-- *INIZIO HEADER -->
     <header class="d-flex align-items-center">
       <div class="container-fluid">
@@ -46,13 +47,13 @@
 
           <!-- HEADER DX -->
           <div class="col-1 d-flex justify-content-around align-items-center">
-            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-list"></i></div>
-            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-circle-question"></i></div>
-            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+            <div class="d-none d-lg-inline-block me-2"><i class="fa-solid fa-list"></i></div>
+            <div class="d-none d-lg-inline-block me-2"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="d-none d-lg-inline-block me-2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
 
             <!-- INIZIO DROPDOWN -->
             <div class="btn-group">
-              <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" class="btn p-0 p-sm-2" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-bell text-warning"></i>
               </button>
               <ul class="dropdown-menu">
@@ -75,12 +76,23 @@
       <div class="row h-100">
 
         <!-- SIDEBAR -->
-        <div class="col-1 sidealbar">
+        <div class="col-1 col-lg-2 sidealbar">
+          <div class="h-100 d-flex flex-column justify-content-between align-items-center text-white">
 
+            <!-- SIDEBAR TOP -->
+            <div class="flex-column">
+              <div><i class="fa-solid fa-house p-2 pt-4"></i> <span class="d-none d-lg-inline-block">Home</span></div>
+              <div><i class="fa-solid fa-chart-simple p-2"></i> <span class="d-none d-lg-inline-block">Stats</span></div>
+              <div><i class="fa-solid fa-signal p-2"></i> <span class="d-none d-lg-inline-block">Signals</span></div>
+            </div>
+
+            <!-- SIDEBAR DOWN -->
+            <div class="flex-column"><i class="fa-solid fa-gear p-2 pb-4"> </i><span class="d-none d-lg-inline-block">Admin</span></div>
+          </div>
         </div>
 
         <!-- DATI CENTRALI -->
-        <div class="col-11 px-0">
+        <div class="col-11 col-lg-10 px-0 dati_centrali">
 
           <!-- SOTTOTITOLO BLU -->
           <div class="container-fluid bg-primary text-white py-4">
@@ -92,14 +104,14 @@
 
           <!-- MAIN SX -->
           <div class="col-lg8">
+            <!-- PRIMA TABELLA -->
             <div class="card my-2">
-
               <div class="card-header d-flex justify-content-between">
                 <h3>Prossime Classi</h3>
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
 
-                  <!-- INIZIO FORM -->
+                <!-- INIZIO FORM -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                   aria-labelledby="offcanvasRightLabel">
                   <div class="offcanvas-header">
@@ -112,7 +124,8 @@
                         <label for="inputEmail4" class="form-label">Email</label>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">@</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username"
+                            aria-describedby="basic-addon1">
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -139,8 +152,9 @@
                         <input type="text" class="form-control" id="inputZip">
                       </div>
                       <div class="input-group mb-3">
-                          <label for="inputZip" class="form-label">Foto</label>
-                          <input type="file" class="form-control w-100 ms-0" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                        <label for="inputZip" class="form-label">Foto</label>
+                        <input type="file" class="form-control w-100 ms-0" id="inputGroupFile03"
+                          aria-describedby="inputGroupFileAddon03" aria-label="Upload">
                       </div>
                       <div class="col-12">
                         <div class="form-check">
@@ -151,14 +165,14 @@
                         </div>
                       </div>
                       <div class="col-12">
-                          <button type="submit" class="btn btn-primary">
-                              Salva
-                          </button>
-                          <button type="submit" class="btn btn-warning">
-                              Svuota
-                          </button>
+                        <button type="submit" class="btn btn-primary">
+                          Salva
+                        </button>
+                        <button type="submit" class="btn btn-warning">
+                          Svuota
+                        </button>
                       </div>
-                  </form>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -266,7 +280,53 @@
               </table>
             </div>
 
+            <!-- TABELLA FAQ -->
+            <div class="card">
+              <div class="card-header">
+                <h3>FAQ</h3>
 
+                <!-- FAQ ACCORDION -->
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Come aggiungere una nuova classe?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum provident voluptas minus tempora doloribus labore voluptate! Debitis, eos natus dolorem laborum voluptates eius odio cumque ducimus veniam quos? Facere, eos.
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Come posso accedere alle informazioni del mio account?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam, labore repellat, fugiat aspernatur consequatur iusto natus tenetur tempore ratione quisquam laboriosam quod exercitationem sed? Soluta unde distinctio vel. Possimus.
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Posso usare questa dashboard da mobile?
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro possimus expedita repudiandae sequi quasi sunt provident unde ratione architecto culpa quidem, iste qui ex deleniti, est quos similique! Corrupti, consequuntur.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
           </div>
 
           <!-- MAIN DX -->

@@ -16,7 +16,11 @@ main {
   background-image: url(../img/sidebar-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+}
+
+.dati_centrali {
+  height: calc( 100vh - 5rem);
+  overflow: scroll;
 }
 
 .logo_classe {
@@ -35,4 +39,6 @@ main {
     width: 80%;
   }
 }
+
+
 
