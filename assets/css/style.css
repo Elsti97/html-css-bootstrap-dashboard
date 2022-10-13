@@ -1,0 +1,22 @@
+.contenitore-tutto {
+  height: 100vh;
+}
+
+header {
+  height: 5rem;
+  background-color: #F9F9F9;
+}
+
+main {
+  height: calc(100% - 5rem);
+}
+
+.sidealbar {
+  background-color: #051E34;
+  background-image: url(../img/sidebar-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+
