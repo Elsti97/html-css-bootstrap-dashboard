@@ -23,3 +23,16 @@ main {
   width: 2rem;
 }
 
+@media screen and (max-width: 6ì520px) {
+  .offcanvas.offcanvas-end {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:520px) {
+
+  .offcanvas.offcanvas-end {
+    width: 80%;
+  }
+}
+
