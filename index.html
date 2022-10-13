@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
   <title>Document</title>
 
   <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
@@ -15,79 +18,98 @@
   <!-- MIO STILE -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
   <div class="contenitore-tutto">
     <!-- *INIZIO HEADER -->
-      <header class="d-flex align-items-center">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-center">
+    <header class="d-flex align-items-center">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
 
-            <!-- HEADER SX -->
-            <div class="col-1">
-              <img src="./assets/img/mobile-logo.png" class="d-inline-block d-lg-none img-fluid" alt="Logo-mobile">
-              <img src="./assets/img/logo.svg" class="d-none d-lg-inline-block img-fluid" alt="Logo-sito">
+          <!-- HEADER SX -->
+          <div class="col-1">
+            <img src="./assets/img/mobile-logo.png" class="d-inline-block d-lg-none img-fluid" alt="Logo-mobile">
+            <img src="./assets/img/logo.svg" class="d-none d-lg-inline-block img-fluid" alt="Logo-sito">
+          </div>
+
+          <!-- HEADER CX -->
+          <div class="col-10">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel"
+                aria-label="Username" aria-describedby="basic-addon1">
             </div>
+          </div>
 
-            <!-- HEADER CX -->
-            <div class="col-10">
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
+          <!-- HEADER DX -->
+          <div class="col-1 d-flex justify-content-around align-items-center">
+            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-list"></i></div>
+            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="d-none d-lg-inline-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+
+            <!-- INIZIO DROPDOWN -->
+            <div class="btn-group">
+              <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bell text-warning"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Profilo</button></li>
+                <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                <li><button class="dropdown-item" type="button">Logout</button></li>
+              </ul>
             </div>
+            <!-- FINE DROPDOWN -->
 
-            <!-- HEADER DX -->
-            <div class="col-1 d-flex justify-content-around align-items-center">
-              <div class="d-none d-lg-inline-block"><i class="fa-solid fa-list"></i></div>
-              <div class="d-none d-lg-inline-block"><i class="fa-solid fa-circle-question"></i></div>
-              <div class="d-none d-lg-inline-block"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-
-              <!-- INIZIO DROPDOWN -->
-              <div class="btn-group">
-                <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-bell text-warning"></i>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" type="button">Profilo</button></li>
-                  <li><button class="dropdown-item" type="button">Fatturazione</button></li>
-                  <li><button class="dropdown-item" type="button">Logout</button></li>
-                </ul>
-              </div>
-              <!-- FINE DROPDOWN -->
-
-            </div>
           </div>
         </div>
+      </div>
 
-      </header>
-      <!-- *FINE HEADER -->
+    </header>
+    <!-- *FINE HEADER -->
 
-      <!-- *MAIN -->
-      <main class="container-fluid">
-        <div class="row h-100">
+    <!-- *MAIN -->
+    <main class="container-fluid">
+      <div class="row h-100">
 
-          <!-- SIDEBAR -->
-          <div class="col-1 sidealbar">
+        <!-- SIDEBAR -->
+        <div class="col-1 sidealbar">
 
+        </div>
+
+        <!-- DATI CENTRALI -->
+        <div class="col-11 px-0">
+
+          <!-- SOTTOTITOLO BLU -->
+          <div class="container-fluid bg-primary text-white py-4">
+            <div class="row">
+              <div class="col-lg-8">Boolean</div>
+              <div class="col-lg-4">Studenti online negli ultimi 30 minuti</div>
+            </div>
           </div>
 
-          <!-- DATI CENTRALI -->
-          <div class="col-11 px-0">
+          <!-- MAIN SX -->
+          <div class="col-lg8">
+            <div class="card my-2">
 
-            <!-- SOTTOTITOLO BLU -->
-            <div class="container-fluid bg-primary text-white py-4">
-              <div class="row">
-                <div class="col-lg-8">Boolean</div>
-                <div class="col-lg-4">Studenti online negli ultimi 30 minuti</div>
+              <div class="card-header d-flex justify-content-between">
+                <h3>Prossime Classi</h3>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    ...
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <!-- MAIN SX -->
-            <div class="col-lg8">
-
               <!-- TABELLA CLASSI -->
               <table class="table">
                 <thead>
@@ -102,8 +124,8 @@
                 <tbody>
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 75</td>
-                    <td class="d-none d-md-table-cell text-end" >15 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">15 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-success">Done</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -113,8 +135,8 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 76</td>
-                    <td class="d-none d-md-table-cell text-end" >16 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">16 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-success">Done</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -124,8 +146,8 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 77</td>
-                    <td class="d-none d-md-table-cell text-end" >17 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">17 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-warning">process</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -135,8 +157,8 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 78</td>
-                    <td class="d-none d-md-table-cell text-end" >18 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">18 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-success">Done</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -146,20 +168,20 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 79</td>
-                    <td class="d-none d-md-table-cell text-end" >19 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">19 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-danger">failed</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                      
+
                     </td>
                   </tr>
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 80</td>
-                    <td class="d-none d-md-table-cell text-end" >20 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">20 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-success">Done</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -169,8 +191,8 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 81</td>
-                    <td class="d-none d-md-table-cell text-end" >21 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">21 Feb 2021</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-danger">failed</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -180,8 +202,8 @@
 
                   <tr>
                     <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 82</td>
-                    <td class="d-none d-md-table-cell text-end" >22 Feb 2022</td>
-                    <td class="d-none d-md-table-cell text-end" >20%</td>
+                    <td class="d-none d-md-table-cell text-end">22 Feb 2022</td>
+                    <td class="d-none d-md-table-cell text-end">20%</td>
                     <td class="text-center"><button class="btn btn-success">Done</button></td>
                     <td>
                       <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
@@ -192,15 +214,19 @@
               </table>
             </div>
 
-            <!-- MAIN DX -->
-            <div class="col-lg-4"></div>
+
           </div>
+
+          <!-- MAIN DX -->
+          <div class="col-lg-4"></div>
         </div>
-      </main>
-      <!-- *FINE MAIN -->
+      </div>
+    </main>
+    <!-- *FINE MAIN -->
   </div>
-  
-  
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
