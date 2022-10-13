@@ -73,6 +73,7 @@
 
     <!-- *MAIN -->
     <main class="container-fluid">
+
       <div class="row h-100">
 
         <!-- SIDEBAR -->
@@ -82,12 +83,14 @@
             <!-- SIDEBAR TOP -->
             <div class="flex-column">
               <div><i class="fa-solid fa-house p-2 pt-4"></i> <span class="d-none d-lg-inline-block">Home</span></div>
-              <div><i class="fa-solid fa-chart-simple p-2"></i> <span class="d-none d-lg-inline-block">Stats</span></div>
+              <div><i class="fa-solid fa-chart-simple p-2"></i> <span class="d-none d-lg-inline-block">Stats</span>
+              </div>
               <div><i class="fa-solid fa-signal p-2"></i> <span class="d-none d-lg-inline-block">Signals</span></div>
             </div>
 
             <!-- SIDEBAR DOWN -->
-            <div class="flex-column"><i class="fa-solid fa-gear p-2 pb-4"> </i><span class="d-none d-lg-inline-block">Admin</span></div>
+            <div class="flex-column"><i class="fa-solid fa-gear p-2 pb-4"> </i><span
+                class="d-none d-lg-inline-block">Admin</span></div>
           </div>
         </div>
 
@@ -102,236 +105,295 @@
             </div>
           </div>
 
-          <!-- MAIN SX -->
-          <div class="col-lg8">
-            <!-- PRIMA TABELLA -->
-            <div class="card my-2">
-              <div class="card-header d-flex justify-content-between">
-                <h3>Prossime Classi</h3>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+          <!-- *TABELLE VARIE -->
+          <div class="d-flex">
 
-                <!-- INIZIO FORM -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                  aria-labelledby="offcanvasRightLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <form class="row g-3">
-                      <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
+            <!-- MAIN SX -->
+            <div class="col-lg-8">
+              <!-- PRIMA TABELLA -->
+              <div class="card my-2">
+                <div class="card-header d-flex justify-content-between">
+                  <h3>Prossime Classi</h3>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+
+                  <!-- INIZIO FORM -->
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">Form</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <form class="row g-3">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Email</label>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                              aria-describedby="basic-addon1">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Indirizzo</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">Città</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label">Stato</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>Scegli stato</option>
+                            <option>Italia</option>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">CAP</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
                         <div class="input-group mb-3">
-                          <span class="input-group-text" id="basic-addon1">@</span>
-                          <input type="text" class="form-control" placeholder="" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                          <label for="inputZip" class="form-label">Foto</label>
+                          <input type="file" class="form-control w-100 ms-0" id="inputGroupFile03"
+                            aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                              Seleziona per proseguire
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">
+                            Salva
+                          </button>
+                          <button type="submit" class="btn btn-warning">
+                            Svuota
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- TABELLA CLASSI -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome</th>
+                      <th class="d-none d-md-table-cell text-end" scope="col">Data inizio</th>
+                      <th class="d-none d-md-table-cell text-end" scope="col">ROI</th>
+                      <th class="text-center" scope="col">Stato</th>
+                      <th scope="col">Azioni</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 75
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">15 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-success">Done</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 76
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">16 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-success">Done</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 77
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">17 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-warning">process</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 78
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">18 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-success">Done</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 79
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">19 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-danger">failed</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 80
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">20 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-success">Done</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 81
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">21 Feb 2021</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-danger">failed</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe" alt=""> Classe 82
+                      </td>
+                      <td class="d-none d-md-table-cell text-end">22 Feb 2022</td>
+                      <td class="d-none d-md-table-cell text-end">20%</td>
+                      <td class="text-center"><button class="btn btn-success">Done</button></td>
+                      <td>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- TABELLA FAQ -->
+              <div class="card">
+                <div class="card-header">
+                  <h3>FAQ</h3>
+
+                  <!-- FAQ ACCORDION -->
+                  <div class="card-body">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Come aggiungere una nuova classe?
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                          aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum provident voluptas minus
+                            tempora doloribus labore voluptate! Debitis, eos natus dolorem laborum voluptates eius odio
+                            cumque ducimus veniam quos? Facere, eos.
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                              aria-controls="flush-collapseTwo">
+                              Come posso accedere alle informazioni del mio account?
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam, labore repellat,
+                              fugiat aspernatur consequatur iusto natus tenetur tempore ratione quisquam laboriosam quod
+                              exercitationem sed? Soluta unde distinctio vel. Possimus.
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Posso usare questa dashboard da mobile?
+                              </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro possimus expedita
+                                repudiandae sequi quasi sunt provident unde ratione architecto culpa quidem, iste qui ex
+                                deleniti, est quos similique! Corrupti, consequuntur.
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4">
-                      </div>
-                      <div class="col-12">
-                        <label for="inputAddress" class="form-label">Indirizzo</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="">
-                      </div>
-                      <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Città</label>
-                        <input type="text" class="form-control" id="inputCity">
-                      </div>
-                      <div class="col-md-4">
-                        <label for="inputState" class="form-label">Stato</label>
-                        <select id="inputState" class="form-select">
-                          <option selected>Scegli stato</option>
-                          <option>Italia</option>
-                        </select>
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputZip" class="form-label">CAP</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-                      <div class="input-group mb-3">
-                        <label for="inputZip" class="form-label">Foto</label>
-                        <input type="file" class="form-control w-100 ms-0" id="inputGroupFile03"
-                          aria-describedby="inputGroupFileAddon03" aria-label="Upload">
-                      </div>
-                      <div class="col-12">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck">
-                          <label class="form-check-label" for="gridCheck">
-                            Seleziona per proseguire
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <button type="submit" class="btn btn-primary">
-                          Salva
-                        </button>
-                        <button type="submit" class="btn btn-warning">
-                          Svuota
-                        </button>
-                      </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- TABELLA CLASSI -->
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Nome</th>
-                    <th class="d-none d-md-table-cell text-end" scope="col">Data inizio</th>
-                    <th class="d-none d-md-table-cell text-end" scope="col">ROI</th>
-                    <th class="text-center" scope="col">Stato</th>
-                    <th scope="col">Azioni</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 75</td>
-                    <td class="d-none d-md-table-cell text-end">15 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-success">Done</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 76</td>
-                    <td class="d-none d-md-table-cell text-end">16 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-success">Done</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 77</td>
-                    <td class="d-none d-md-table-cell text-end">17 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-warning">process</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 78</td>
-                    <td class="d-none d-md-table-cell text-end">18 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-success">Done</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 79</td>
-                    <td class="d-none d-md-table-cell text-end">19 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-danger">failed</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 80</td>
-                    <td class="d-none d-md-table-cell text-end">20 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-success">Done</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 81</td>
-                    <td class="d-none d-md-table-cell text-end">21 Feb 2021</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-danger">failed</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td scope="row"><img src="./assets/img/class-avatar.jpg" class="logo_classe"> Classe 82</td>
-                    <td class="d-none d-md-table-cell text-end">22 Feb 2022</td>
-                    <td class="d-none d-md-table-cell text-end">20%</td>
-                    <td class="text-center"><button class="btn btn-success">Done</button></td>
-                    <td>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-pen"></i></button>
-                      <button class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
 
-            <!-- TABELLA FAQ -->
-            <div class="card">
-              <div class="card-header">
-                <h3>FAQ</h3>
+            <!-- MAIN DX -->
+            <div class="col-lg-4 my-2">
 
-                <!-- FAQ ACCORDION -->
-                <div class="card-body">
-                  <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          Come aggiungere una nuova classe?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum provident voluptas minus tempora doloribus labore voluptate! Debitis, eos natus dolorem laborum voluptates eius odio cumque ducimus veniam quos? Facere, eos.
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          Come posso accedere alle informazioni del mio account?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aliquam, labore repellat, fugiat aspernatur consequatur iusto natus tenetur tempore ratione quisquam laboriosam quod exercitationem sed? Soluta unde distinctio vel. Possimus.
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          Posso usare questa dashboard da mobile?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro possimus expedita repudiandae sequi quasi sunt provident unde ratione architecto culpa quidem, iste qui ex deleniti, est quos similique! Corrupti, consequuntur.
-                      </div>
-                    </div>
+              <!-- TO DO LIST -->
+              <div class="card">
+                <div class="card-header">
+                  <h3>TODO</h3>
+
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input type="checkbox">
+                        <span>Kickoff nuove classi</span>
+                      </li>
+
+                      <li class="list-group-item">
+                        <input type="checkbox">
+                        <span>Lezione su Bootstrap 5 in classe #75</span>
+                      </li>
+
+                      <li class="list-group-item">
+                        <input type="checkbox">
+                        <span>Controllare username github studenti</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
 
-          <!-- MAIN DX -->
-          <div class="col-lg-4"></div>
+
         </div>
+
+
+
       </div>
     </main>
     <!-- *FINE MAIN -->
