@@ -19,32 +19,49 @@
 
   <div class="contenitore-tutto">
     <!-- *INIZIO HEADER -->
-      <header class="container-fluid">
-        <div class="row align-items-center justify-content-center">
+      <header class="d-flex align-items-center">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-center">
 
-          <!-- HEADER SX -->
-          <div class="col-1">
-            <img src="./assets/img/logo.svg" alt="Logo-sito">
-          </div>
+            <!-- HEADER SX -->
+            <div class="col-1">
+              <img src="./assets/img/mobile-logo.png" class="d-inline-block d-lg-none img-fluid" alt="Logo-mobile">
+              <img src="./assets/img/logo.svg" class="d-none d-lg-inline-block img-fluid" alt="Logo-sito">
+            </div>
 
-          <!-- HEADER CX -->
-          <div class="col-10">
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </span>
-              <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+            <!-- HEADER CX -->
+            <div class="col-10">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+
+            <!-- HEADER DX -->
+            <div class="col-1 d-flex justify-content-around align-items-center">
+              <i class="fa-solid fa-list"></i>
+              <i class="fa-solid fa-circle-question"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+              
+              <!-- INIZIO DROPDOWN -->
+              <div class="btn-group">
+                <button type="button" class="btn" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                  <i class="fa-solid fa-bell text-warning"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><button class="dropdown-item" type="button">Profilo</button></li>
+                  <li><button class="dropdown-item" type="button">Fatturazione</button></li>
+                  <li><button class="dropdown-item" type="button">Logout</button></li>
+                </ul>
+              </div>
+              <!-- FINE DROPDOWN -->
+
             </div>
           </div>
-
-          <!-- HEADER DX -->
-          <div class="col-1 d-flex justify-content-around">
-            <i class="fa-solid fa-list"></i>
-            <i class="fa-solid fa-circle-question"></i>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-            <i class="fa-solid fa-bell text-warning"></i>
-          </div>
         </div>
+
       </header>
       <!-- *FINE HEADER -->
 
