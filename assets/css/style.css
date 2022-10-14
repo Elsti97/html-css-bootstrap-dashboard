@@ -18,6 +18,19 @@ main {
   background-size: cover;
 }
 
+.breadcrumb >.active {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+.breadcrumb-item button, .bg_blue {
+  background-color: #155CBA;
+}
+
 .dati_centrali {
   height: calc( 100vh - 5rem);
   overflow: scroll;
